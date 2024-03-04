@@ -1,0 +1,21 @@
+InvasionEspacial/
+│
+├── assets/
+│   ├── images/
+│   │   ├── player.png
+│   │   ├── enemy.png
+│   │   └── background.jpg
+│   └── sounds/
+│       ├── shoot.wav
+│       ├── explosion.wav
+│       └── background.wav
+│
+├── src/
+│   ├── __init__.py
+│   ├── main.py
+│   ├── game.py
+│   ├── player.py
+│   ├── enemy.py
+│   └── settings.py
+│
+└── README.md
