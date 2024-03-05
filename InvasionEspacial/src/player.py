@@ -3,7 +3,7 @@
 import pygame
 import os
 
-from InvasionEspacial.src.settings import SCREEN_HEIGHT, SCREEN_WIDTH
+from settings import SCREEN_HEIGHT, SCREEN_WIDTH
 
 class Player:
     def __init__(self, screen):
