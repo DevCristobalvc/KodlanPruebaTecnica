@@ -1,5 +1,9 @@
+# Aquí definimos la clase Player que maneja la lógica del jugador, como dibujar la nave y moverla.
+
 import pygame
 import os
+
+from InvasionEspacial.src.settings import SCREEN_HEIGHT, SCREEN_WIDTH
 
 class Player:
     def __init__(self, screen):

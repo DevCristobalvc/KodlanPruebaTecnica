@@ -1,6 +1,10 @@
+# Este archivo define la clase Enemy, que controla los enemigos del juego.
+
 import pygame
 import os
 from random import randint
+
+from InvasionEspacial.src.settings import SCREEN_WIDTH
 
 class Enemy:
     def __init__(self, screen):
