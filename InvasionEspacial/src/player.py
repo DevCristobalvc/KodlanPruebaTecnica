@@ -8,13 +8,27 @@ from settings import SCREEN_HEIGHT, SCREEN_WIDTH
 class Player:
     def __init__(self, screen):
         self.screen = screen
-        # Obtén la ruta del directorio actual donde se encuentra este script
         current_path = os.path.dirname(__file__)  # Ruta del directorio de player.py
-        # Construye la ruta hacia la carpeta de assets
         image_path = os.path.join(current_path, '../assets/images', 'player.png')
-        self.image = pygame.image.load(image_path)
+        
+        # Carga la imagen original
+        original_image = pygame.image.load(image_path)
+        
+        # Decide el porcentaje del ancho de la pantalla que la imagen del jugador debería ocupar
+        target_width_percentage = 0.15  # Ejemplo: 15% del ancho de la pantalla
+        target_width = int(SCREEN_WIDTH * target_width_percentage)
+        
+        # Mantiene la relación de aspecto de la imagen original
+        aspect_ratio = original_image.get_height() / original_image.get_width()
+        target_height = int(target_width * aspect_ratio)
+        
+        # Redimensiona la imagen a las nuevas dimensiones
+        self.image = pygame.transform.scale(original_image, (target_width, target_height))
         self.rect = self.image.get_rect()
+        
+        # Ajusta la posición inicial del jugador en el centro abajo de la pantalla
         self.rect.midbottom = (SCREEN_WIDTH / 2, SCREEN_HEIGHT - 10)
+        
         self.speed = 5
 
     def move(self, direction):
