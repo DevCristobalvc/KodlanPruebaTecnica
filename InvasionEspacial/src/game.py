@@ -13,6 +13,8 @@ class Game:
         self.screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
         pygame.display.set_caption('Invasión Espacial')
         self.clock = pygame.time.Clock()
+        self.background = pygame.image.load('../assets/images/background.png').convert()  # Ajusta esta ruta
+        self.background = pygame.transform.scale(self.background, (SCREEN_WIDTH, SCREEN_HEIGHT))
         self.player = Player(self.screen)
         self.enemies = [Enemy(self.screen) for _ in range(5)]
 
@@ -23,7 +25,9 @@ class Game:
                     pygame.quit()
                     sys.exit()
 
-            self.screen.fill(BLACK)
+            # Dibuja el fondo primero
+            self.screen.blit(self.background, (0, 0))
+            
             self.player.draw()
             for enemy in self.enemies:
                 enemy.move()
