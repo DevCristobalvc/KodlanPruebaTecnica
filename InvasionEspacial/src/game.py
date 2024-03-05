@@ -1,3 +1,6 @@
+# Este archivo maneja la lógica principal del juego, incluyendo la inicialización de Pygame, 
+# la creación de objetos y el bucle principal del juego.
+
 import pygame
 import sys
 from settings import *
