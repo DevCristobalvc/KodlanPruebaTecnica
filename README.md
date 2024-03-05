@@ -31,7 +31,7 @@ Para ejecutar este juego, necesitarás Python y PyGame instalado en tu computado
 
 4. Navega hasta la carpeta del proyecto en tu terminal o línea de comandos y ejecuta el archivo `main.py` con Python:
     ```
-    python src/main.py
+    python InvasionEspacial/src/main.py
     ```
 
 ## Estructura del Proyecto
